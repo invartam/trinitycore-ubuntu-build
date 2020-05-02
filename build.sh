@@ -13,7 +13,7 @@ cmake .. -Wno-dev -DPREFIX=/tc \
         -DUSE_COREPCH=1 \
         -DUSE_SCRIPTPCH=1 \
         -DTOOLS=0 \
-        -DSCRIPTS=1 \
+        -DSCRIPTS=static \
         -DNOJEM=0 \
         -DCMAKE_BUILD_TYPE=RelWithDebInfo \
         -DCMAKE_CXX_FLAGS="-m64 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -pipe -fno-strict-aliasing" \
