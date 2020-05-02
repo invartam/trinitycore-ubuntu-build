@@ -18,8 +18,8 @@ cmake .. -DCMAKE_INSTALL_PREFIX=/tc \
         -DNOJEM=0 \
         -DCMAKE_BUILD_TYPE=RelWithDebInfo \
         -DCMAKE_C_COMPILER="gcc" \
-        -DCMAKE_CXX_FLAGS="-m64 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -pipe -fno-strict-aliasing" \
-        -DCMAKE_C_FLAGS="-m64 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -pipe -fno-strict-aliasing" \
+        -DCMAKE_CXX_FLAGS="-m64 -std=c++14 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -pipe -fno-strict-aliasing -fpermissive" \
+        -DCMAKE_C_FLAGS="-m64 -std=c++14 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -pipe -fno-strict-aliasing -fpermissive" \
   || exit 255
 make -j4 || exit 255
 make install || exit 255

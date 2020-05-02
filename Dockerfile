@@ -13,6 +13,8 @@ RUN apt-get install -y cmake make git gcc g++ pkg-config \
 #RUN ln -s /lib/x86_64-linux-gnu/ /usr/lib64
 #RUN ln -s /lib/x86_64-linux-gnu/librt.so.1 /lib64/
 
+RUN touch /usr/include/stropts.h
+
 ADD build.sh /usr/bin/build.sh
 
 RUN groupadd -g 1000 psadmin && useradd -g psadmin -u 1000 psadmin
