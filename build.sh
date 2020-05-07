@@ -24,3 +24,4 @@ cmake .. -DCMAKE_INSTALL_PREFIX=/tc \
 make -j4 || exit 255
 make install || exit 255
 cp -rf /tc/* /src/binaries/
+cp -rf /src/sql /src/binaries/sql
