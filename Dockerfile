@@ -3,15 +3,13 @@ FROM ubuntu:19.10
 RUN apt-get update
 RUN apt-get dist-upgrade -y
 RUN apt-get install -y cmake make git gcc g++ pkg-config \
-        libssl-dev libreadline-dev zlib1g-dev libboost-all-dev \
-        libncurses-dev libbz2-dev libpthread-workqueue-dev wget libace-dev \
-        libace-6.4.5 libmariadbd-dev libmariadb-client-lgpl-dev-compat
+        libssl-dev libreadline5 libreadline-dev zlib1g-dev \
+        libboost-all-dev libncurses-dev libbz2-dev \
+        libpthread-workqueue-dev wget libmariadbd-dev \
+        libmariadb-client-lgpl-dev-compat
 
-#RUN update-alternatives --install /usr/bin/cc cc /usr/bin/clang 100
-#RUN update-alternatives --install /usr/bin/c++ c++ /usr/bin/clang 100
-
-#RUN ln -s /lib/x86_64-linux-gnu/ /usr/lib64
-#RUN ln -s /lib/x86_64-linux-gnu/librt.so.1 /lib64/
+RUN ln -s /lib/x86_64-linux-gnu/ /usr/lib64
+RUN ln -s /lib/x86_64-linux-gnu/librt.so.1 /lib64/
 
 RUN touch /usr/include/stropts.h
 
